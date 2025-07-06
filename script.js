@@ -28,3 +28,9 @@ document.addEventListener('DOMContentLoaded', function() {  // Wait for HTML to 
 document.getElementById('demoButton').addEventListener('click', function() {
 this.classList.add('float-away');
 });
+document.body.addEventListener('click', function(e) {
+  // Only trigger if the background itself is clicked (not a child element)
+  if (e.target === document.body) {
+    document.body.classList.toggle('bg-orange');
+  }
+});
