@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');  /* Import Google Fonts */
+
+
+
+main {                               /* Target the main content area */
+  max-width: 800px;                   /* Limit the maximum width to 800 pixels */
+  margin: 60px auto;                  /* Add 60px top/bottom margin, center horizontally */
+  padding: 0 20px;                    /* Add 20px left/right padding, no top/bottom */
+}
+
+.section-title {                      /* Target elements with class="section-title" */
+  font-weight: 700;                   /* Make the text bold */
+  text-transform: uppercase;          /* Convert text to all capital letters */
+  margin-top: 40px;                   /* Add 40 pixels of space above this element */
+  margin-bottom: 12px;                /* Add 12 pixels of space below this element */
+  font-size: 14px;                    /* Set font size to 14 pixels */
+}
+
+button {                              /* Target all button elements */
+  background-color: #111;             /* Set button background to dark gray */
+  color: white;                       /* Set button text color to white */
+  border: none;                       /* Remove the default button border */
+  padding: 12px 24px;                 /* Add 12px top/bottom, 24px left/right spacing inside */
+  cursor: pointer;                    /* Change mouse cursor to hand when hovering over button */
+  transition: background-color 0.3s;  /* Smooth color change animation (0.3 seconds) */
+}
+
+button:hover {                        /* Apply styles when user hovers over button */
+  background-color: #333;             /* Change background to lighter gray on hover */
+}
+
+#messageDisplay {                     /* Target element with id="messageDisplay" */
+  margin-top: 20px;                   /* Add 20 pixels of space above this element */
+  padding: 16px;                      /* Add 16 pixels of spacing inside the element */
+  border: 1px solid #ccc;             /* Add a light gray border around the element */
+  background-color: #f9f9f9;          /* Set background color to very light gray */
+  min-height: 20px;                   /* Set minimum height so the area is visible even when empty */
+}
+
+.overlay {
+  position: fixed;           /* Cover the whole viewport */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.15); /* Black, 15% opacity */
+  pointer-events: none;      /* Allows clicks to pass through */
+  z-index: 10;               /* Make sure it's above content */
+}
+
+.content {
+  position: relative;
+  z-index: 20;               /* Above the overlay for interaction */
+}
+/* ...existing code... */
+
+body {
+  font-family: 'Indie Flower', cursive;
+  background-color: #d1c4e9;   /* Dreamy purple */
+  color: #111;
+  margin: 0;
+  padding: 0;
+}
+@keyframes float-away {
+  to {
+    transform: translateY(-120vh) scale(1.2) rotate(-10deg);
+    opacity: 0;
+  }
+}
+
+.float-away {
+  animation: float-away 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
